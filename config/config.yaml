@@ -1,0 +1,20 @@
+# 基础配置
+video_dir: "./data/videos"   # 视频文件夹路径
+output_dir: "./data/outputs" # 输出结果路径
+batch_size: 4
+num_workers: 4
+num_keyframes: 16
+
+# ST-GCN模型参数
+in_channels: 256
+hidden_channels: [256, 128, 64]
+num_layers: 3
+
+# 关键帧选择参数
+centrality_weight: 0.4
+distinctiveness_weight: 0.3
+representativeness_weight: 0.3
+coverage_threshold: 0.8
+
+# 设备
+device: "cuda:0"

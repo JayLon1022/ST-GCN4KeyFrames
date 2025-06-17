@@ -26,7 +26,8 @@ def compute_representativeness(features, selected):
             rep.append(0)
         else:
             sims = cos_sim[i, selected]
-            rep.append(torch.norm(sims * features[selected], p=2) / (torch.norm(sims, p=2) + 1e-8))
+            sims_expanded = sims.unsqueeze(1) # shape: [len(selected), 1]
+            rep.append(torch.norm(sims_expanded * features[selected], p=2) / (torch.norm(sims, p=2) + 1e-8))
     return torch.tensor(rep, device=features.device)
 
 def keyframe_selection(features, adj, k, alpha=0.4, beta=0.3, gamma=0.3, tau=0.8):
@@ -53,7 +54,7 @@ def keyframe_selection(features, adj, k, alpha=0.4, beta=0.3, gamma=0.3, tau=0.8
         cos_sim = torch.matmul(features, features[selected].T) / (
             features.norm(dim=1, keepdim=True) * features[selected].norm(dim=1, keepdim=True).T + 1e-8)
         coverage = cos_sim.max(dim=1)[0].mean().item()
-        if coverage >= tau:
-            break
+        # if coverage >= tau:
+        #     break
     selected = sorted(selected)
     return selected 

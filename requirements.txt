@@ -1,10 +1,8 @@
 pytorch-lightning>=1.5
-torch>=1.10
-torchvision
 opencv-python
 mediapipe
 scikit-learn
 scikit-image
 pyyaml
 matplotlib
-numpy 
+numpy

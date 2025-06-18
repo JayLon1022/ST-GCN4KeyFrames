@@ -8,34 +8,34 @@ This project implements an innovative method for automatic video keyframe select
 
 ## ✨ Features
 
-- **🎯 Multi-modal Feature Extraction**: Combines optical flow, scene change detection, facial geometry, and deep visual features
-- **🕸️ Graph-based Modeling**: Uses ST-GCN to capture temporal dependencies between frames
-- **🧠 Intelligent Keyframe Selection**: Implements centrality, distinctiveness, and representativeness-based selection criteria
-- **⚙️ Configurable Parameters**: Easy-to-modify configuration for different use cases
-- **⚡ PyTorch Lightning Integration**: Clean, modular code structure with Lightning framework
+- **Multi-modal Feature Extraction**: Combines optical flow, scene change detection, facial geometry, and deep visual features
+- **Graph-based Modeling**: Uses ST-GCN to capture temporal dependencies between frames
+- **Intelligent Keyframe Selection**: Implements centrality, distinctiveness, and representativeness-based selection criteria
+- **Configurable Parameters**: Easy-to-modify configuration for different use cases
+- **PyTorch Lightning Integration**: Clean, modular code structure with Lightning framework
 
 ## 🏗️ Architecture
 
 ### 🔍 Feature Extraction Pipeline
 
-1. **⏱️ Temporal Features**: Frame indices and optical flow analysis
-2. **🎨 Scene Analysis**: RGB histogram differences and SSIM-based scene change detection
-3. **👤 Facial Features**: Face geometry, expressions, and pose estimation using MediaPipe
-4. **🤖 Deep Features**: Pre-trained CNN features with PCA dimensionality reduction
+1. **Temporal Features**: Frame indices and optical flow analysis
+2. **Scene Analysis**: RGB histogram differences and SSIM-based scene change detection
+3. **Facial Features**: Face geometry, expressions, and pose estimation using MediaPipe
+4. **Deep Features**: Pre-trained CNN features with PCA dimensionality reduction
 
 ### 🕸️ ST-GCN Model
 
-- **🔗 Graph Construction**: K-nearest neighbor adjacency matrix with temporal constraints
-- **🧮 Graph Convolution**: Multi-layer GCN with residual connections
-- **🔀 Feature Fusion**: Combines all extracted features into unified representations
+- **Graph Construction**: K-nearest neighbor adjacency matrix with temporal constraints
+- **Graph Convolution**: Multi-layer GCN with residual connections
+- **Feature Fusion**: Combines all extracted features into unified representations
 
 ### 🎯 Keyframe Selection Algorithm
 
 The selection process considers three key factors:
 
-- **⭐ Centrality**: How well a frame represents the overall video content
-- **💎 Distinctiveness**: How unique a frame is compared to others
-- **🎯 Representativeness**: How well selected frames cover the entire video
+- **Centrality**: How well a frame represents the overall video content
+- **Distinctiveness**: How unique a frame is compared to others
+- **Representativeness**: How well selected frames cover the entire video
 
 ## 📊 Keyframe Visualization
 
@@ -57,7 +57,7 @@ python -m venv stgcn-keyframes-env
 source stgcn-keyframes-env/bin/activate  # On Windows: stgcn-keyframes-env\Scripts\activate
 ```
 
-3.  **Install dependencies**:
+3. **Install dependencies**:
 
 ```bash
 pip install -r requirements.txt

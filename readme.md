@@ -1,4 +1,4 @@
-# 🎬 ST-GCN4KeyFrames
+# 🎬 STGCN4KeyFrames
 
 A deep learning approach for video keyframe extraction using Spatial-Temporal Graph Convolutional Networks (ST-GCN).
 
@@ -43,21 +43,21 @@ The selection process considers three key factors:
 
 ## 🚀 Installation
 
-1. **📥 Clone the repository**:
+1. **Clone the repository**:
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/JayLon1022/STGCN4KeyFrames.git
 cd ST-GCN4KeyFrames
 ```
 
-2. **🐍 Create a virtual environment**:
+2. **Create a virtual environment**:
 
 ```bash
 python -m venv stgcn-keyframes-env
 source stgcn-keyframes-env/bin/activate  # On Windows: stgcn-keyframes-env\Scripts\activate
 ```
 
-3. **📦 Install dependencies**:
+3.  **Install dependencies**:
 
 ```bash
 pip install -r requirements.txt
@@ -94,8 +94,8 @@ device: "cuda:0"              # Use "cpu" for CPU-only processing
 
 ### 🎬 Running Keyframe Extraction
 
-1. **📁 Place your videos** in the `data/videos` directory
-2. **▶️ Run the extraction script**:
+1. **Place your videos** in the `data/videos` directory
+2. **Run the extraction script**:
 
 ```bash
 python test.py
@@ -103,11 +103,11 @@ python test.py
 
 The script will:
 
-- 🔄 Process all `.mp4` files in the input directory
-- 🔍 Extract comprehensive features from each frame
-- 🕸️ Apply ST-GCN to model temporal relationships
-- 🎯 Select optimal keyframes based on the configured criteria
-- 💾 Save selected keyframes as JPEG images in the output directory
+- Process all `.mp4` files in the input directory
+- Extract comprehensive features from each frame
+- Apply ST-GCN to model temporal relationships
+- Select optimal keyframes based on the configured criteria
+- Save selected keyframes as JPEG images in the output directory
 
 ### 📂 Output Structure
 
@@ -146,61 +146,61 @@ ST-GCN4KeyFrames/
 
 ## 📦 Dependencies
 
-- **⚡ PyTorch Lightning**: Deep learning framework
-- **🔥 PyTorch**: Neural network library
-- **📹 OpenCV**: Video processing
-- **👤 MediaPipe**: Face detection and landmark extraction
-- **🔬 scikit-learn**: Machine learning utilities
-- **🖼️ scikit-image**: Image processing
-- **🔢 NumPy**: Numerical computing
-- **📊 Matplotlib**: Visualization
+- **PyTorch Lightning**: Deep learning framework
+- **PyTorch**: Neural network library
+- **OpenCV**: Video processing
+- **MediaPipe**: Face detection and landmark extraction
+- **scikit-learn**: Machine learning utilities
+- **scikit-image**: Image processing
+- **NumPy**: Numerical computing
+- **Matplotlib**: Visualization
 
 ## 🔧 Key Components
 
 ### 🔍 Feature Extraction (`utils/video_utils.py`)
 
-- **🌊 Optical Flow**: Motion analysis between consecutive frames
-- **🎨 Scene Change Detection**: RGB histogram differences and SSIM
-- **👤 Facial Analysis**: Face geometry, expressions, and pose estimation
-- **🤖 Deep Features**: Pre-trained CNN features with PCA
+- **Optical Flow**: Motion analysis between consecutive frames
+- **Scene Change Detection**: RGB histogram differences and SSIM
+- **Facial Analysis**: Face geometry, expressions, and pose estimation
+- **Deep Features**: Pre-trained CNN features with PCA
 
 ### 🕸️ ST-GCN Model (`lightning/model.py`)
 
-- **🔗 GraphConvBlock**: Residual graph convolution with batch normalization
-- **🧠 STGCN**: Main model combining multiple GCN layers
+- **GraphConvBlock**: Residual graph convolution with batch normalization
+- **STGCN**: Main model combining multiple GCN layers
 
 ### 🎯 Keyframe Selection (`lightning/keyframe_selector.py`)
 
-- **⭐ Centrality Computation**: Frame importance based on graph structure
-- **💎 Distinctiveness**: Uniqueness measurement
-- **🎯 Representativeness**: Coverage optimization
-- **🔄 Greedy Selection**: Iterative frame selection algorithm
+- **Centrality Computation**: Frame importance based on graph structure
+- **Distinctiveness**: Uniqueness measurement
+- **Representativeness**: Coverage optimization
+- **Greedy Selection**: Iterative frame selection algorithm
 
 ## ⚡ Performance Considerations
 
-- **🚀 GPU Acceleration**: Configure `device: "cuda:0"` for GPU processing
-- **💾 Memory Usage**: Adjust `batch_size` and `max_frames` based on available memory
-- **⚡ Processing Speed**: Reduce `num_keyframes` for faster processing
-- **🎯 Feature Quality**: Modify feature extraction parameters in `video_utils.py`
+- **GPU Acceleration**: Configure `device: "cuda:0"` for GPU processing
+- **Memory Usage**: Adjust `batch_size` and `max_frames` based on available memory
+- **Processing Speed**: Reduce `num_keyframes` for faster processing
+- **Feature Quality**: Modify feature extraction parameters in `video_utils.py`
 
 ## 🛠️ Customization
 
 ### ➕ Adding New Features
 
-1. **🔧 Implement feature extraction function** in `utils/video_utils.py`
-2. **🔄 Update `extract_features()`** to include new features
-3. **📊 Adjust `in_channels`** in configuration
+1. **Implement feature extraction function** in `utils/video_utils.py`
+2. **Update `extract_features()`** to include new features
+3. **Adjust `in_channels`** in configuration
 
 ### 🎯 Modifying Selection Criteria
 
-1. **⚖️ Edit weights** in `config.yaml`
-2. **🧮 Modify selection algorithm** in `lightning/keyframe_selector.py`
-3. **➕ Add new scoring functions** as needed
+1. **Edit weights** in `config.yaml`
+2. **Modify selection algorithm** in `lightning/keyframe_selector.py`
+3. **Add new scoring functions** as needed
 
 ### 🏗️ Model Architecture Changes
 
-1. **🔧 Modify `lightning/model.py`** for different GCN architectures
-2. **📊 Adjust `hidden_channels` and `num_layers`** in configuration
+1. **Modify `lightning/model.py`** for different GCN architectures
+2. **Adjust `hidden_channels` and `num_layers`** in configuration
 
 ## 📄 License
 
@@ -211,7 +211,7 @@ ST-GCN4KeyFrames/
 If you use this code in your research, please cite:
 
 ```bibtex
-[Add citation information here]
+[TBD]
 ```
 
 ## 🤝 Contributing
@@ -220,4 +220,4 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## 📞 Contact
 
-[Add your contact information here]
+[TBD]

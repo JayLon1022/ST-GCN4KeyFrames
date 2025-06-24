@@ -47,7 +47,7 @@ The selection process considers three key factors:
 
 ```bash
 git clone https://github.com/JayLon1022/STGCN4KeyFrames.git
-cd ST-GCN4KeyFrames
+cd STGCN4KeyFrames
 ```
 
 2. **Create a virtual environment**:
